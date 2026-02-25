@@ -27,7 +27,7 @@ export const pizzas = [
     description: "Premium mozzarella cheese, fresh tomatoes, and basil on our signature crust.",
     price: 1850,
     category: "Vegetarian",
-    image: "https://images.unsplash.com/photo-1574071318508-1cdbad80ad38?q=80&w=1000&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1590947132387-155cc02f3212?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHBpenphfGVufDB8fDB8fHww?q=80&w=1000&auto=format&fit=crop",
     rating: 4.5,
     isTrending: false,
     spiceLevel: "Low"
@@ -73,5 +73,45 @@ export const categories = [
   "Seafood",
   "Vegetarian",
   "Meat",
-  "Spicy Sri Lankan"
+  "Spicy Sri Lankan",
+  "Family Packs"
+];
+
+export const familyPacks = [
+  {
+    id: 101,
+    name: "Classic Family Feast",
+    description: "2 Large Pizzas of your choice, 1 Large Garlic Bread, and a 2L Coke.",
+    price: 4950,
+    category: "Family Packs",
+    image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1000&auto=format&fit=crop",
+    rating: 4.9,
+    isTrending: true,
+    discount: "Save LKR 1200",
+    items: ["2 Large Pizzas", "Garlic Bread", "2L Coke"]
+  },
+  {
+    id: 102,
+    name: "Sri Lankan Party Pack",
+    description: "3 Medium Pizzas (Spicy Chicken, Pol Sambol, Cheese), 10pcs Spicy Wings, and 2 x 1.5L Ginger Beer.",
+    price: 6800,
+    category: "Family Packs",
+    image: "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?q=80&w=1000&auto=format&fit=crop",
+    rating: 4.8,
+    isTrending: true,
+    discount: "Save LKR 1800",
+    items: ["3 Medium Pizzas", "10pcs Wings", "3L Drinks"]
+  },
+  {
+    id: 103,
+    name: "Mega Seafood Combo",
+    description: "2 Large Seafood Delight Pizzas, Prawn Tempura (8pcs), and a 2L Coke.",
+    price: 7500,
+    category: "Family Packs",
+    image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=1000&auto=format&fit=crop",
+    rating: 5.0,
+    isTrending: false,
+    discount: "Premium Deal",
+    items: ["2 Large Seafood Pizzas", "Prawn Tempura", "2L Coke"]
+  }
 ];
