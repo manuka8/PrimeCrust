@@ -6,6 +6,7 @@ import CartDrawer from './components/cart/CartDrawer';
 import Home from './pages/Home';
 import Menu from './pages/Menu';
 import Offers from './pages/Offers';
+import FamilyPacks from './pages/FamilyPacks';
 import Checkout from './pages/Checkout';
 import Success from './pages/Success';
 
@@ -19,6 +20,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/menu" element={<Menu />} />
             <Route path="/offers" element={<Offers />} />
+            <Route path="/family-packs" element={<FamilyPacks />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/success" element={<Success />} />
           </Routes>
