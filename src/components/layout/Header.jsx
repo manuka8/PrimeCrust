@@ -28,6 +28,10 @@ const Header = () => {
                 <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
                     <Link to="/" className="text-dark hover:text-primary transition-colors">Home</Link>
                     <Link to="/menu" className="text-dark hover:text-primary transition-colors">Menu</Link>
+                    <Link to="/family-packs" className="relative text-dark hover:text-primary transition-colors group">
+                        Family Packs
+                        <span className="absolute -top-1 -right-4 bg-primary text-white text-[8px] font-bold px-1 rounded-full animate-pulse">NEW</span>
+                    </Link>
                     <Link to="/offers" className="text-dark hover:text-primary transition-colors">Offers</Link>
                 </nav>
 
@@ -64,8 +68,8 @@ const Header = () => {
                                             navigate('/menu');
                                         }}
                                         className={`px-3 py-1.5 rounded-xl text-xs font-medium transition-all ${activeCategory === cat
-                                                ? 'bg-primary text-white shadow-md shadow-primary/20'
-                                                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                                            ? 'bg-primary text-white shadow-md shadow-primary/20'
+                                            : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                                             }`}
                                     >
                                         {cat}
@@ -104,6 +108,10 @@ const Header = () => {
                 <div className="md:hidden bg-white border-t border-gray-100 p-4 flex flex-col gap-4 animate-slide-in-down">
                     <Link to="/" className="text-lg font-semibold px-4 py-2 hover:bg-gray-50 rounded-xl">Home</Link>
                     <Link to="/menu" className="text-lg font-semibold px-4 py-2 hover:bg-gray-50 rounded-xl">Menu</Link>
+                    <Link to="/family-packs" className="text-lg font-semibold px-4 py-2 hover:bg-gray-50 rounded-xl flex items-center justify-between">
+                        Family Packs
+                        <span className="bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded-full">NEW</span>
+                    </Link>
                     <Link to="/offers" className="text-lg font-semibold px-4 py-2 hover:bg-gray-50 rounded-xl">Offers</Link>
                     <div className="sm:hidden px-4 mt-2">
                         <div className="relative">
