@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const slides = [
     {
@@ -9,6 +10,7 @@ const slides = [
         subtitle: "Experience the authentic heat of island spices on a crispy crust.",
         image: "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?q=80&w=2000&auto=format&fit=crop",
         cta: "Order Now",
+        path: "/menu",
         color: "bg-primary"
     },
     {
@@ -16,7 +18,8 @@ const slides = [
         title: "Family Combo Deals",
         subtitle: "Share the love with our 2-for-1 large pizza offers every weekend.",
         image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2000&auto=format&fit=crop",
-        cta: "View Offers",
+        cta: "View Packs",
+        path: "/family-packs",
         color: "bg-secondary"
     },
     {
@@ -24,13 +27,15 @@ const slides = [
         title: "Weekend Discounts up to 30%",
         subtitle: "Flat 30% off on all Seafood Pizzas from 6 PM to 10 PM.",
         image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=2000&auto=format&fit=crop",
-        cta: "Grab Deal",
+        cta: "View Offers",
+        path: "/offers",
         color: "bg-dark"
     }
 ];
 
 const Hero = () => {
     const [current, setCurrent] = useState(0);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -91,10 +96,16 @@ const Hero = () => {
                             transition={{ delay: 0.9 }}
                             className="flex flex-wrap gap-4"
                         >
-                            <button className="px-8 py-4 bg-primary text-white font-bold rounded-2xl hover:bg-primary-dark transition-all transform hover:scale-105 shadow-xl shadow-primary/20">
+                            <button
+                                onClick={() => navigate(slides[current].path)}
+                                className="px-8 py-4 bg-primary text-white font-bold rounded-2xl hover:bg-primary-dark transition-all transform hover:scale-105 shadow-xl shadow-primary/20"
+                            >
                                 {slides[current].cta}
                             </button>
-                            <button className="px-8 py-4 bg-white/10 backdrop-blur-md text-white font-bold rounded-2xl hover:bg-white/20 transition-all border border-white/10">
+                            <button
+                                onClick={() => navigate('/menu')}
+                                className="px-8 py-4 bg-white/10 backdrop-blur-md text-white font-bold rounded-2xl hover:bg-white/20 transition-all border border-white/10"
+                            >
                                 View Menu
                             </button>
                         </motion.div>
