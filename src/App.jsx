@@ -4,6 +4,8 @@ import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import CartDrawer from './components/cart/CartDrawer';
 import Home from './pages/Home';
+import Menu from './pages/Menu';
+import Offers from './pages/Offers';
 import Checkout from './pages/Checkout';
 import Success from './pages/Success';
 
@@ -15,7 +17,8 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/menu" element={<Home />} /> {/* Menu points to home with focus/filter in this simple demo */}
+            <Route path="/menu" element={<Menu />} />
+            <Route path="/offers" element={<Offers />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/success" element={<Success />} />
           </Routes>
